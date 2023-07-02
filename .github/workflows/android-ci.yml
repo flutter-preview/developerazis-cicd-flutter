@@ -3,10 +3,13 @@ name: Android CI
 # 1
 on:
   # 2
-  push:
-    branches: [ "master" ]
-#  pull_request:
-#    branches: [ "master" ]
+  pull_request:
+    types:
+      - opened
+    branches:
+      - 'master'
+  #  pull_request:
+  #    branches: [ "master" ]
 
   # 3
   workflow_dispatch:
